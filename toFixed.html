@@ -29,29 +29,29 @@ function toFixed(number, precision) {
 }
 
 tests({
-  'It should correctly round decimals to the given precision': function() {
+  'It should correctly round decimals to the given precision.': function() {
     eq(toFixed(0.615, 2), '0.62');
   },
-  'It should correctly round 1.005 to 1.01': function() {
+  'It should correctly round 1.005 to 1.01.': function() {
     eq(toFixed(1.005, 2), '1.01');
   },
-  'It should correctly round 10.235 to 10.24': function() {
+  'It should correctly round 10.235 to 10.24.': function() {
     eq(toFixed(10.235, 2), '10.24');
   },
-  'It should correctly handle numbers with no decimal': function() {
+  'It should correctly handle numbers with no decimal.': function() {
     eq(toFixed(2, 2), '2.00');
   },
-  'It should correctly handle numbers with no leading zero': function() {
+  'It should correctly handle decimal numbers with no leading zero.': function() {
     eq(toFixed(.615, 2), '0.62');
   },
-  'If no precision is given, it should default to zero': function() {
+  'If no precision is given, it should default to zero.': function() {
     eq(toFixed(2), '2');
     eq(toFixed(.615), '1');
   },
-  'It should add trailing zeros if the given precision is larger than the current precision': function() {
+  'It should add trailing zeros if the given precision is larger than the current precision.': function() {
     eq(toFixed(2.1, 2), '2.10');
   },
-  'It should work for negative numbers': function() {
+  'It should work for negative numbers.': function() {
     eq(toFixed(-2.1, 2), '-2.10');
     eq(toFixed(-2, 2), '-2.00');
     eq(toFixed(-2), '-2');
